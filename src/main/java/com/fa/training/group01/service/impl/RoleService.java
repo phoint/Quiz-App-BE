@@ -30,7 +30,6 @@ public class RoleService implements IRoleService {
 
 	@Override
 	public boolean delete(RoleEntity entity) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

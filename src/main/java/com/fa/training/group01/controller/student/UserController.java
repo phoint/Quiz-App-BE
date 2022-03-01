@@ -3,35 +3,25 @@ package com.fa.training.group01.controller.student;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.preauth.PreAuthenticatedCredentialsNotFoundException;
 import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.fa.training.group01.domain_model.CurrentUser;
-import com.fa.training.group01.dto.RegisterFormUserDTO;
 import com.fa.training.group01.entity.UserEntity;
 import com.fa.training.group01.payload.UpdatePasswordRequest;
 import com.fa.training.group01.payload.UpdateUserProfileRequest;
-import com.fa.training.group01.security.jwt.JWTUtil;
 import com.fa.training.group01.service.IUserService;
 import com.fa.training.group01.service.impl.CloudinaryService;
 import com.fa.training.group01.service.impl.UserDetailsImpl;

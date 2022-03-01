@@ -1,13 +1,9 @@
 package com.fa.training.group01.service.impl;
 
-import java.util.Date;
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import com.fa.training.group01.domain_model.FacebookUser;
 import com.fa.training.group01.domain_model.Role;
 import com.fa.training.group01.entity.UserEntity;
-import com.fa.training.group01.payload.UpdateUserProfileRequest;
 import com.fa.training.group01.repository.IUserRepository;
 import com.fa.training.group01.service.IRoleService;
 import com.fa.training.group01.service.IUserService;

@@ -11,8 +11,6 @@ import com.fa.training.group01.service.IUserService;
 import com.fa.training.group01.util.MessageBundle;
 import com.fa.training.group01.util.Regex;
 
-import lombok.ToString;
-
 @Component
 public class RegisterUserFormValidator implements Validator {
 	@Autowired

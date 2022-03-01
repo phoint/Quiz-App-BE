@@ -19,16 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fa.training.group01.domain_model.CurrentUser;
 import com.fa.training.group01.domain_model.Role;
-import com.fa.training.group01.dto.RegisterFormUserDTO;
 import com.fa.training.group01.entity.RoleEntity;
 import com.fa.training.group01.entity.UserEntity;
 import com.fa.training.group01.payload.UpdateUserRequest;
 import com.fa.training.group01.payload.UserPageRequest;
 import com.fa.training.group01.service.IRoleService;
 import com.fa.training.group01.service.IUserService;
-import com.fa.training.group01.service.impl.UserDetailsImpl;
 import com.fa.training.group01.specification.UserSpecification;
 import com.fa.training.group01.util.RequestURL;
 import com.fa.training.group01.util.ResponseMessage;
@@ -61,7 +58,7 @@ public class UserController {
 		int pageIndex = Optional.ofNullable(userPageRequest.getPageIndex()).orElse(1);
 		int pageSize = Optional.ofNullable(userPageRequest.getPageSize()).orElse(DEFAULT_PAGE_SIZE);
 		String email = Optional.ofNullable(userPageRequest.getEmail()).orElse("");
-		String sortBy = Optional.ofNullable(userPageRequest.getSortBy()).orElse("");
+//		String sortBy = Optional.ofNullable(userPageRequest.getSortBy()).orElse("");
 		Specification<UserEntity> specification = Specification.where(null);
 		if (StringUtils.hasText(email)) {
 			specification = specification.and(userSpecification.containsEmail(email));

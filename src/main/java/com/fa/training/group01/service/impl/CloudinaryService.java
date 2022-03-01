@@ -22,7 +22,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public String uploadAudio(MultipartFile file) {
 		try {
-			Map response = cloudinary.uploader().uploadLarge(file.getBytes(),
+			Map<?, ?> response = cloudinary.uploader().uploadLarge(file.getBytes(),
 					ObjectUtils.asMap("folder", AUDIO_FOLDER, "overwrite", false, "resource_type", "video"));
 //			response.forEach((key, value) -> {
 //				System.out.println(key + ":" + value);
@@ -37,7 +37,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public String uploadImage(MultipartFile file) {
 		try {
-			Map response = cloudinary.uploader().upload(file.getBytes(),
+			Map<?, ?> response = cloudinary.uploader().upload(file.getBytes(),
 					ObjectUtils.asMap("folder", IMAGE_FOLDER, "overwrite", false, "resource_type", "image"));
 			return (String) response.get("secure_url");
 		} catch (IOException e) {
@@ -49,7 +49,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public String uploadVideo(MultipartFile file) {
 		try {
-			Map response = cloudinary.uploader().uploadLarge(file.getBytes(),
+			Map<?, ?> response = cloudinary.uploader().uploadLarge(file.getBytes(),
 					ObjectUtils.asMap("folder", VIDEO_FOLDER, "overwrite", true, "resource_type", "video"));
 			return (String) response.get("secure_url");
 		} catch (IOException e) {
@@ -103,7 +103,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public boolean deleteImage(String publicID) {
 		try {
-			Map response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "image"));
+			Map<?, ?> response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "image"));
 			return response.get("result").equals("ok");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -114,7 +114,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public boolean deleteAudio(String publicID) {
 		try {
-			Map response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "video"));
+			Map<?, ?> response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "video"));
 			return response.get("result").equals("ok");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -125,7 +125,7 @@ public class CloudinaryService implements ICloudinaryService {
 	@Override
 	public boolean deleteVideo(String publicID) {
 		try {
-			Map response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "video"));
+			Map<?, ?> response = cloudinary.uploader().destroy(publicID, ObjectUtils.asMap("resource_type", "video"));
 			return response.get("result").equals("ok");
 		} catch (IOException e) {
 			e.printStackTrace();

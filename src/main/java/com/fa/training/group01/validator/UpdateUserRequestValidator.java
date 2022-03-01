@@ -3,7 +3,6 @@ package com.fa.training.group01.validator;
 import java.lang.reflect.Field;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
@@ -11,7 +10,6 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.fa.training.group01.domain_model.Role;
-import com.fa.training.group01.payload.UpdatePasswordRequest;
 import com.fa.training.group01.payload.UpdateUserRequest;
 import com.fa.training.group01.service.IUserService;
 import com.fa.training.group01.util.MessageBundle;

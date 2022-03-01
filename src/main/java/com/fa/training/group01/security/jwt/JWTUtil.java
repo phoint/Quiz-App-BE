@@ -16,6 +16,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class JWTUtil implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String secret = "quiz_group01";
 	/* milis * sec * min * hour */ // 10 hours
 	private int expiration = 1000 * 60 * 60 * 10;

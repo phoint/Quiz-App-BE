@@ -6,7 +6,6 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.fa.training.group01.dto.RegisterFormUserDTO;
 import com.fa.training.group01.payload.ResetPasswordRequest;
 import com.fa.training.group01.service.impl.UserService;
 import com.fa.training.group01.util.MessageBundle;

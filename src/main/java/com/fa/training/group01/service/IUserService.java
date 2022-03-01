@@ -1,15 +1,11 @@
 package com.fa.training.group01.service;
 
-import java.util.List;
-
-import org.modelmapper.internal.bytebuddy.description.type.TypeDefinition.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.fa.training.group01.domain_model.FacebookUser;
 import com.fa.training.group01.entity.UserEntity;
-import com.fa.training.group01.payload.UpdateUserProfileRequest;
 
 public interface IUserService extends CRUDService<UserEntity, Integer> {
 	boolean existEmail(String email);
